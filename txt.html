@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selenium Advanced Practice Form</title>
+    <script>
+        function openPopup() {
+            window.open('popup.html', 'Popup', 'width=300,height=200');
+        }
+        function openNewTab() {
+            window.open('https://www.example.com', '_blank');
+        }
+    </script>
+</head>
+<body>
+    <h1>Selenium Locator Practice Form</h1>
+    
+    <!-- Input by Name -->
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput" name="nameField" placeholder="Find by Name">
+    <br><br>
+
+    <!-- Input by ID -->
+    <label for="emailInput">Email:</label>
+    <input type="email" id="emailInput" placeholder="Find by ID">
+    <br><br>
+
+    <!-- Input by CSS -->
+    <label for="cssInput">Favorite Color:</label>
+    <input type="text" id="cssInput" class="colorInput" placeholder="Find by CSS">
+    <br><br>
+
+    <!-- Input by XPath -->
+    <div>
+        <label>Age:</label>
+        <input type="number" placeholder="Find by XPath">
+    </div>
+    <br>
+
+    <!-- Input only findable by XPath Parent-Child Relationship -->
+    <div id="parent">
+        <label>Hidden Field:</label>
+        <input type="text" placeholder="Find by XPath Parent-Child">
+    </div>
+    <br>
+
+    <!-- Multiple iframes -->
+    <iframe id="iframe1" srcdoc="<p id='textIframe1'>Text in Iframe 1</p>"></iframe>
+    <br>
+    <iframe id="iframe2" srcdoc="<p id='textIframe2'>Text in Iframe 2</p>"></iframe>
+    <br>
+
+    <!-- Button to Open a Popup -->
+    <button onclick="openPopup()">Open Popup</button>
+
+    <button onclick="openNewTab()">Open New Tab</button>
+
+
+</body>
+</html>
+
